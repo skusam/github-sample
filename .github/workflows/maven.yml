@@ -32,8 +32,4 @@ jobs:
       if: always()
       with:
         junit_files: "target/surefire-reports/**/*.xml"
-    - name: Store artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: sample.jar
-        path: target/*-jar-with-dependencies.jar
+    
