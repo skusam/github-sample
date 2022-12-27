@@ -35,5 +35,5 @@ jobs:
     - name: Store artifact
       uses: actions/upload-artifact@v3
       with:
-        name: sample-jar
-        path: target/*.jar
+        name: sample.jar
+        path: target/*-jar-with-dependencies.jar
