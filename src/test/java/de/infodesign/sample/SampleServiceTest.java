@@ -17,7 +17,7 @@ public class SampleServiceTest {
 	@Test
 	public void testSayHelloString() {
 		testee.sayHello("you");
-		assertTrue(true);
+		assertTrue(false);
 	}
 
 }
