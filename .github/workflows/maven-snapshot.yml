@@ -6,11 +6,9 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven
+name: Build a snapshot using Maven
 
-on:
-  push:
-    branches: [ "main" ]
+on: push
 
 jobs:
   build:
