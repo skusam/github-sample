@@ -25,3 +25,6 @@ jobs:
         cache: maven
     - name: Release
       uses: qcastel/github-actions-maven-release@master
+      with:
+            release-branch-name: "release"
+            
