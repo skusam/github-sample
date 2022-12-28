@@ -12,15 +12,14 @@ on: workflow_dispatch
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
-    steps:
-    - uses: actions/checkout@v3
-    - name: Release
-      uses: qcastel/github-actions-maven-release@master
-        env:
-          JAVA_HOME: /usr/lib/jvm/java-11-openjdk/
-        with:
-            release-branch-name: "release"
-            
+      steps:
+        - uses: actions/checkout@v3
+        - name: Release
+          uses: qcastel/github-actions-maven-release@master
+            env:
+              JAVA_HOME: /usr/lib/jvm/java-11-openjdk/
+            with:
+              release-branch-name: "release"
+
