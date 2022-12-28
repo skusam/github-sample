@@ -13,7 +13,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<artifact.repository>https://jfrog.ims-go.de/artifactory</artifact.repository>
+		<artifact.repository>https://maven.pkg.github.com/skusam/github-sample</artifact.repository>
 	</properties>
 
 	<dependencies>
@@ -67,32 +67,16 @@
 		</plugins>
 	</build>
 	
-	<repositories>
-		<repository>
-			<id>artifactory</id>
-			<name>JFrog Artifactory</name>
-			<url>${artifact.repository}/maven</url>
-		</repository>
-	</repositories>
-	
-	<pluginRepositories>
-		<pluginRepository>
-			<id>artifactory</id>
-			<name>JFrog Artifactory</name>
-			<url>${artifact.repository}/maven</url>
-		</pluginRepository>
-	</pluginRepositories>
-	
 	<distributionManagement>
 		<repository>
-			<id>artifatory</id>
-			<name>Releases</name>
-			<url>${artifact.repository}/maven-local-releases</url>
+			<id>github</id>
+			<name>GitHub Packages</name>
+			<url>${artifact.repository}</url>
 		</repository>
 		<snapshotRepository>
-			<id>artifactory</id>
-			<name>Snapshots</name>
-			<url>${artifact.repository}/maven-local-snapshots</url>
+			<id>github</id>
+			<name>GitHub Packages</name>
+			<url>${artifact.repository}</url>
 		</snapshotRepository>
 	</distributionManagement>
 	
