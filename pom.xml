@@ -80,4 +80,9 @@
 		</snapshotRepository>
 	</distributionManagement>
 	
+	<scm>
+      <developerConnection>scm:git:https://github.com/skusam/github-sample.git</developerConnection>
+      <tag>HEAD</tag>
+    </scm>
+  
 </project>
