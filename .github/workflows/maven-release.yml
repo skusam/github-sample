@@ -1,0 +1,30 @@
+name: Build a release using Maven
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v3
+
+      - name: Create release branch
+	    uses: peterjgrainger/action-create-branch@v2.2.0
+		  env:
+  			GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+		  with:
+  			branch: 'release'
+
+      - name: Build release
+        uses: qcastel/github-actions-maven-release@master
+        env:
+          JAVA_HOME: /usr/lib/jvm/java-11-openjdk/
+        with:
+          maven-args: "-Dmaven.javadoc.skip=true -DskipTests -DskipITs -Dmaven.deploy.skip=true"
+          maven-servers: '[{"id": "github", "username": "skusam", "password": "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"}]'
+
+          gpg-enabled: true
+          gpg-key-id: ${{ secrets.GPG_KEY_ID }}
+          gpg-key: ${{ secrets.GPG_KEY }}
