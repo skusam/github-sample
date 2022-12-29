@@ -18,7 +18,7 @@ jobs:
           release-branch-name: "release"
           maven-args: "-Dmaven.javadoc.skip=true -DskipTests -DskipITs -Dmaven.deploy.skip=true"
           maven-servers: '[{"id": "github", "username": "skusam", "password": "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"}]'
- 	      git-release-bot-name: "skusam"
+          git-release-bot-name: "skusam"
           git-release-bot-email: "michael.skusa@knistr.com"
           gpg-enabled: true
           gpg-key-id: ${{ secrets.GPG_KEY_ID }}
