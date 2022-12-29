@@ -15,7 +15,7 @@ jobs:
       - run: git branch release
       
       - run: git checkout release
-	  
+      
       - name: Build release
         uses: qcastel/github-actions-maven-release@master
         env:
