@@ -16,7 +16,7 @@ jobs:
           JAVA_HOME: /usr/lib/jvm/java-11-openjdk/
         with:
           release-branch-name: "release"
-          maven-args: "-Dmaven.javadoc.skip=true -DskipTests -DskipITs -Dmaven.deploy.skip=true -Dusername=${secrets.GITHUB_USER} -Dpassword=${secrets.GITHUB_TOKEN}"
+          maven-args: "-Dmaven.javadoc.skip=true -DskipTests -DskipITs -Dmaven.deploy.skip=true -Dusername=skusam -Dpassword=d6c9a6452af5f6aac7ad21b08379ef91685fb768"
           maven-servers: '[{"id": "github", "username": "skusam", "password": "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"}]'
 
           gpg-enabled: true
